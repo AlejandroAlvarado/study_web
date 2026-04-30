@@ -523,13 +523,6 @@ export default function Quiz() {
       .anim-bounce-in { animation: bounce-in 0.5s ease-out; }
       .anim-shake { animation: shake 0.4s ease-in-out; }
       .anim-float { animation: float 3s ease-in-out infinite; }
-      .pattern-bg {
-        background-color: #fef9e7;
-        background-image:
-          radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.08) 0%, transparent 40%),
-          radial-gradient(circle at 80% 70%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
-          radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
-      }
     `}</style>
   );
 
@@ -591,7 +584,7 @@ export default function Quiz() {
   // ====== WELCOME SCREEN ======
   if (screen === 'welcome') {
     return (
-      <div className="min-h-screen pattern-bg font-body p-4 sm:p-8 flex items-center justify-center">
+      <div className="min-h-screen font-body p-4 sm:p-8 flex items-center justify-center">
         {fontStyles}
         <div className="max-w-2xl w-full">
           <div className="text-center anim-bounce-in">
@@ -657,7 +650,7 @@ export default function Quiz() {
     const isCorrect = selected === current.correct;
 
     return (
-      <div className="min-h-screen pattern-bg font-body p-4 sm:p-6">
+      <div className="min-h-screen font-body p-4 sm:p-6">
         {fontStyles}
         <div className="max-w-2xl mx-auto">
           {/* Header */}
@@ -806,7 +799,7 @@ export default function Quiz() {
     }
 
     return (
-      <div className="min-h-screen pattern-bg font-body p-4 sm:p-8 flex items-center justify-center">
+      <div className="min-h-screen font-body p-4 sm:p-8 flex items-center justify-center">
         {fontStyles}
         <div className="max-w-2xl w-full">
           <div className="bg-white rounded-3xl shadow-xl p-6 sm:p-10 border-4 anim-bounce-in text-center" style={{ borderColor: color + '40' }}>
