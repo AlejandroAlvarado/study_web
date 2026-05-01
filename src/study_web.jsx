@@ -363,7 +363,7 @@ export default function StudyApp() {
           <div className="text-center anim-bounce-in mb-8">
             <div className="text-7xl sm:text-8xl mb-4 anim-float inline-block">📚</div>
             <h1 className="font-display text-4xl sm:text-6xl font-bold mb-3" style={{ color: '#15803d' }}>
-              ¡Hola, explorador!
+              ¡Hola, Elián!
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 font-semibold max-w-xl mx-auto">
               Elige la materia que quieres practicar hoy
