@@ -3,63 +3,73 @@ import {
   CheckCircle2, XCircle, Trophy, RotateCcw, ArrowRight, ArrowLeft,
   BookOpen, MapPin, Globe2, Briefcase, Sparkles, Home,
   Calculator, TrendingUp, Triangle, Ruler, BarChart3, Divide,
+  Square, Coins,
 } from 'lucide-react';
 
 // ===========================
 // SOCIAL STUDIES QUESTIONS
 // ===========================
 const SOCIAL_QUESTIONS = [
-  // ESTUDIOS SOCIALES Y CÍVICA
-  { cat: 'civica', q: '¿Qué son los Estudios Sociales?', options: ['Una materia que solo estudia el pasado', 'Una disciplina que analiza al ser humano desde la historia, geografía y otras áreas', 'Un libro de cuentos', 'Una clase de matemáticas'], correct: 1, tip: 'Los Estudios Sociales nos ayudan a entender cómo viven las personas en sociedad.' },
-  { cat: 'civica', q: '¿Qué es la Educación Cívica?', options: ['Una clase de cocina', 'Una clase de educación física', 'La enseñanza de valores y actitudes para formar buenos ciudadanos', 'Una materia de ciencias naturales'], correct: 2, tip: 'La Educación Cívica forma ciudadanos activos y responsables.' },
+  // ===== ESTUDIOS SOCIALES Y CÍVICA =====
+  { cat: 'civica', q: '¿Qué son los Estudios Sociales?', options: ['Una disciplina que analiza al ser humano desde la historia, geografía y otras áreas', 'Una materia que solo estudia eventos históricos antiguos', 'Una asignatura que solo enseña los nombres y capitales de los países', 'El estudio de los recursos naturales y los ecosistemas'], correct: 0, tip: 'Los Estudios Sociales nos ayudan a entender cómo viven las personas en sociedad.' },
+  { cat: 'civica', q: '¿Qué es la Educación Cívica?', options: ['El estudio de las leyes y el sistema judicial únicamente', 'La enseñanza de la historia universal y sus civilizaciones', 'La enseñanza de valores y actitudes para formar buenos ciudadanos', 'Una materia que enseña geografía y mapas del mundo'], correct: 2, tip: 'La Educación Cívica forma ciudadanos activos y responsables.' },
   { cat: 'civica', q: '¿Qué disciplina estudia la superficie terrestre y su relación con el ser humano?', options: ['Historia', 'Geografía', 'Economía', 'Sociología'], correct: 1, tip: 'La Geografía usa herramientas como los mapas para ubicar lugares.' },
   { cat: 'civica', q: '¿Qué disciplina se enfoca en los acontecimientos del pasado?', options: ['Historia', 'Antropología', 'Geografía', 'Economía'], correct: 0, tip: 'Una herramienta útil de la Historia son las líneas del tiempo.' },
-  { cat: 'civica', q: '¿Qué estudia la Economía?', options: ['Los animales y plantas', 'El clima de los países', 'Cómo las sociedades manejan los recursos para satisfacer sus necesidades', 'El idioma de las personas'], correct: 2, tip: 'La Economía analiza el consumo de bienes y servicios.' },
-  { cat: 'civica', q: 'La palabra "Antropología" viene del griego. ¿Qué significa?', options: ['Estudio de los animales', 'Estudio del hombre (anthropos = hombre, logos = conocimiento)', 'Estudio de las plantas', 'Estudio del cielo'], correct: 1, tip: 'La Antropología investiga al ser humano, su cultura y civilización.' },
-  { cat: 'civica', q: '¿Qué estudia la Sociología?', options: ['Cómo la sociedad influye en las personas y cómo las personas transforman la sociedad', 'Solo el clima', 'Los volcanes', 'Los números'], correct: 0, tip: 'Aborda temas como las migraciones y los cambios en la población.' },
-  { cat: 'civica', q: '¿Qué estudian las Ciencias Políticas?', options: ['Los volcanes', 'Las dinámicas políticas desde el nivel local hasta el internacional', 'Las plantas tropicales', 'Los deportes'], correct: 1, tip: 'Promueven una comprensión crítica de las sociedades.' },
-  { cat: 'civica', q: '¿Cuál es uno de los objetivos de los Estudios Sociales?', options: ['Aprender a bailar', 'Dar una visión general sobre la sociedad y su evolución histórica', 'Aprender a cocinar', 'Ganar dinero'], correct: 1, tip: 'También fomenta la identificación con la patria.' },
-  { cat: 'civica', q: 'La Educación Cívica busca formar ciudadanos:', options: ['Ricos y famosos', 'Silenciosos', 'Conscientes, participativos y comprometidos con la democracia', 'Que vivan lejos'], correct: 2, tip: 'Ciudadanos que respeten las instituciones democráticas del Estado.' },
-  { cat: 'civica', q: '¿En qué áreas de la vida cotidiana impactan los Estudios Sociales y la Educación Cívica?', options: ['Solo en la escuela', 'Solo en el hogar', 'País, comunidad, escuela y hogar', 'Solo en el país'], correct: 2, tip: 'En el hogar propician valores como respeto y solidaridad.' },
-  { cat: 'civica', q: '¿Qué herramienta es muy útil para estudiar Historia?', options: ['La calculadora', 'Las líneas del tiempo', 'El microscopio', 'El telescopio'], correct: 1, tip: 'Las líneas del tiempo nos muestran el orden de los eventos históricos.' },
+  { cat: 'civica', q: '¿Qué estudia la Economía?', options: ['Cómo se relacionan las personas en familia y comunidad', 'Cómo se forman los paisajes naturales del planeta', 'Cómo las sociedades manejan los recursos para satisfacer sus necesidades', 'Cómo evolucionaron las culturas a lo largo del tiempo'], correct: 2, tip: 'La Economía analiza el consumo de bienes y servicios.' },
+  { cat: 'civica', q: 'La palabra "Antropología" viene del griego. ¿Qué significa?', options: ['Estudio de la sociedad y los grupos sociales', 'Estudio del hombre (anthropos = hombre, logos = conocimiento)', 'Estudio de la economía y los mercados', 'Estudio del territorio y los pueblos antiguos'], correct: 1, tip: 'La Antropología investiga al ser humano, su cultura y civilización.' },
+  { cat: 'civica', q: '¿Qué estudia la Sociología?', options: ['Cómo la sociedad influye en las personas y cómo las personas transforman la sociedad', 'Los acontecimientos importantes del pasado lejano', 'La producción y el consumo de bienes y servicios', 'La superficie de la Tierra y sus paisajes'], correct: 0, tip: 'Aborda temas como las migraciones y los cambios en la población.' },
+  { cat: 'civica', q: '¿Qué estudian las Ciencias Políticas?', options: ['Los hechos históricos antiguos de cada país', 'Las dinámicas políticas desde el nivel local hasta el internacional', 'El comportamiento humano y las costumbres', 'Las relaciones económicas entre países'], correct: 1, tip: 'Promueven una comprensión crítica de las sociedades.' },
+  { cat: 'civica', q: '¿Cuál es uno de los objetivos de los Estudios Sociales?', options: ['Memorizar fechas históricas y nombres de países', 'Dar una visión general sobre la sociedad y su evolución histórica', 'Enseñar a usar mapas y herramientas de navegación', 'Aprender los nombres científicos de plantas y animales'], correct: 1, tip: 'También fomenta la identificación con la patria.' },
+  { cat: 'civica', q: 'La Educación Cívica busca formar ciudadanos:', options: ['Conscientes, participativos y comprometidos con la democracia', 'Obedientes que sigan siempre las reglas sin cuestionarlas', 'Expertos en historia universal antigua', 'Que sepan los nombres de todos los países del mundo'], correct: 0, tip: 'Ciudadanos que respeten las instituciones democráticas del Estado.' },
+  { cat: 'civica', q: '¿En qué áreas de la vida cotidiana impactan los Estudios Sociales y la Educación Cívica?', options: ['Únicamente en la escuela durante las clases', 'Solo en el ámbito del hogar familiar', 'En el país, la comunidad, la escuela y el hogar', 'Solo cuando se ejerce el voto en elecciones'], correct: 2, tip: 'En el hogar propician valores como respeto y solidaridad.' },
+  { cat: 'civica', q: '¿Qué herramienta es muy útil para estudiar Historia?', options: ['Los mapas geográficos del mundo actual', 'Las líneas del tiempo', 'Las gráficas estadísticas de población', 'Los modelos del sistema solar'], correct: 1, tip: 'Las líneas del tiempo nos muestran el orden de los eventos históricos.' },
+  { cat: 'civica', q: '¿Qué disciplina investiga al ser humano considerando sus características físicas, su cultura y su civilización?', options: ['Geografía', 'Economía', 'Antropología', 'Ciencias Políticas'], correct: 2, tip: 'La Antropología viene del griego: anthropos (hombre) + logos (conocimiento).' },
+  { cat: 'civica', q: '¿Qué disciplinas aportan conocimientos a los Estudios Sociales?', options: ['Solo Historia y Geografía', 'Solo Geografía y Economía', 'Geografía, Historia, Economía, Antropología, Sociología y Ciencias Políticas', 'Únicamente Historia y Sociología'], correct: 2, tip: 'Por eso los Estudios Sociales nos dan una visión muy completa.' },
 
-  // GEOGRAFÍA DE COSTA RICA
-  { cat: 'geografia', q: '¿Cuál es la superficie terrestre de Costa Rica?', options: ['51 100 km²', '100 000 km²', '25 500 km²', '75 200 km²'], correct: 0, tip: '¡Costa Rica es un país pequeño pero muy diverso!' },
-  { cat: 'geografia', q: '¿Cuál es el punto más alto de Costa Rica?', options: ['Volcán Arenal', 'Volcán Poás', 'Cerro Chirripó con 3 821 metros de altura', 'Volcán Irazú'], correct: 2, tip: 'El Cerro Chirripó está en la cordillera de Talamanca.' },
+  // ===== GEOGRAFÍA DE COSTA RICA =====
+  { cat: 'geografia', q: '¿Cuál es la superficie terrestre de Costa Rica?', options: ['51 100 km²', '101 300 km²', '25 500 km²', '75 200 km²'], correct: 0, tip: '¡Costa Rica es un país pequeño pero muy diverso!' },
+  { cat: 'geografia', q: '¿Cuál es el punto más alto de Costa Rica?', options: ['Volcán Arenal (1670 m)', 'Volcán Poás (2708 m)', 'Cerro Chirripó (3 821 m)', 'Volcán Irazú (3432 m)'], correct: 2, tip: 'El Cerro Chirripó está en la cordillera de Talamanca.' },
   { cat: 'geografia', q: '¿Cuál es la orientación del país?', options: ['De norte a sur', 'De este a oeste', 'De noroeste a sureste', 'De suroeste a noreste'], correct: 2, tip: 'Si miras el mapa, verás que va inclinado de noroeste a sureste.' },
-  { cat: 'geografia', q: 'Costa Rica está bañada por:', options: ['Solo el Mar Caribe', 'Solo el Océano Pacífico', 'El Mar Caribe y el Océano Pacífico', 'El Océano Atlántico y el Océano Índico'], correct: 2, tip: '¡Tenemos costas en dos mares diferentes!' },
+  { cat: 'geografia', q: 'Costa Rica está bañada por:', options: ['Solo el Mar Caribe en toda su costa', 'Solo el Océano Pacífico en sus dos costas', 'El Mar Caribe y el Océano Pacífico', 'El Océano Atlántico y el Océano Índico'], correct: 2, tip: '¡Tenemos costas en dos mares diferentes!' },
   { cat: 'geografia', q: '¿Con qué país limita Costa Rica al norte?', options: ['Panamá', 'Nicaragua', 'Honduras', 'El Salvador'], correct: 1, tip: 'Nicaragua es nuestro vecino del norte.' },
   { cat: 'geografia', q: '¿Con qué país limita Costa Rica al sureste?', options: ['Nicaragua', 'Colombia', 'Panamá', 'Guatemala'], correct: 2, tip: 'Panamá está en el sureste de Costa Rica.' },
   { cat: 'geografia', q: '¿Con qué limita Costa Rica al este?', options: ['Mar Caribe', 'Océano Pacífico', 'Nicaragua', 'Panamá'], correct: 0, tip: 'El Mar Caribe queda al este, en provincias como Limón.' },
+  { cat: 'geografia', q: '¿Con qué limita Costa Rica al oeste?', options: ['Mar Caribe', 'Océano Pacífico', 'Nicaragua', 'Panamá'], correct: 1, tip: 'El Océano Pacífico está al oeste y al sur del país.' },
   { cat: 'geografia', q: '¿Cuántas provincias tiene Costa Rica?', options: ['5', '6', '7', '8'], correct: 2, tip: 'San José, Alajuela, Heredia, Cartago, Guanacaste, Puntarenas y Limón.' },
-  { cat: 'geografia', q: '¿En qué zona climática se ubica Costa Rica?', options: ['Polar', 'Intertropical, entre el Trópico de Cáncer y el Trópico de Capricornio', 'Templada', 'Desértica'], correct: 1, tip: 'Por eso tenemos un clima cálido todo el año.' },
+  { cat: 'geografia', q: '¿En qué zona climática se ubica Costa Rica?', options: ['Zona polar, cerca del Polo Norte', 'Zona intertropical, entre el Trópico de Cáncer y el Trópico de Capricornio', 'Zona templada, lejos del Ecuador', 'Zona desértica con escasa lluvia'], correct: 1, tip: 'Por eso tenemos un clima cálido todo el año.' },
   { cat: 'geografia', q: '¿Cuál de estas NO es una provincia de Costa Rica?', options: ['Heredia', 'Cartago', 'Managua', 'Puntarenas'], correct: 2, tip: 'Managua es la capital de Nicaragua, no una provincia de Costa Rica.' },
-  { cat: 'geografia', q: '¿Cuántos continentes hay en el mundo?', options: ['3', '5', '7', '10'], correct: 1, tip: 'África, América, Asia, Europa y Oceanía.' },
-  { cat: 'geografia', q: '¿Cuántos océanos hay en el mundo?', options: ['2', '3', '5', '8'], correct: 2, tip: 'Pacífico, Atlántico, Índico, Ártico y Antártico.' },
+  { cat: 'geografia', q: '¿Cuántos continentes hay en el mundo?', options: ['4', '5', '6', '7'], correct: 1, tip: 'África, América, Asia, Europa y Oceanía.' },
+  { cat: 'geografia', q: '¿Cuántos océanos hay en el mundo?', options: ['3', '4', '5', '6'], correct: 2, tip: 'Pacífico, Atlántico, Índico, Ártico y Antártico.' },
+  { cat: 'geografia', q: '¿En qué continente se encuentra Costa Rica?', options: ['Asia', 'África', 'América', 'Europa'], correct: 2, tip: 'Costa Rica está en América Central, parte del continente americano.' },
+  { cat: 'geografia', q: '¿En qué subregión de América se ubica Costa Rica?', options: ['América del Norte', 'América Central (Centroamérica)', 'América del Sur', 'El Caribe insular'], correct: 1, tip: 'Centroamérica es el "puente" entre Norte y Sur América.' },
+  { cat: 'geografia', q: '¿Cuáles son las dos estaciones climáticas de Costa Rica?', options: ['Verano e invierno como en Estados Unidos', 'Estación seca y estación lluviosa', 'Primavera y otoño', 'Estación fría y estación cálida'], correct: 1, tip: 'En Costa Rica no hay las cuatro estaciones, solo seca (verano) y lluviosa (invierno).' },
 
-  // CENTROAMÉRICA Y VECINOS
+  // ===== CENTROAMÉRICA Y VECINOS =====
   { cat: 'centroamerica', q: '¿Cuántos países forman Centroamérica?', options: ['5', '6', '7', '8'], correct: 2, tip: 'Belice, Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica y Panamá.' },
   { cat: 'centroamerica', q: '¿Cuáles son los países de Centroamérica?', options: ['Belice, Guatemala, El Salvador, Honduras, Nicaragua, Costa Rica y Panamá', 'México, Guatemala, Honduras, Nicaragua y Costa Rica', 'Costa Rica, Panamá, Colombia y Venezuela', 'Cuba, República Dominicana, Haití y Jamaica'], correct: 0, tip: '¡Son siete países hermanos!' },
-  { cat: 'centroamerica', q: '¿Cuál es una ventaja de la ubicación de Costa Rica?', options: ['Los suelos son muy fértiles para la agricultura', 'Hace mucho frío todo el año', 'Está muy lejos de otros países', 'No tiene playas'], correct: 0, tip: 'Por eso podemos sembrar muchos productos.' },
-  { cat: 'centroamerica', q: '¿Por qué Costa Rica tiene tanta biodiversidad?', options: ['Porque es un país muy grande', 'Porque actúa como un puente natural entre América del Norte y América del Sur', 'Porque tiene muchos desiertos', 'Porque está cerca del polo norte'], correct: 1, tip: 'Por eso aquí viven especies de los dos continentes.' },
+  { cat: 'centroamerica', q: '¿Cuál es una ventaja de la ubicación de Costa Rica?', options: ['Los suelos son muy fértiles, ideales para la agricultura', 'Está rodeada por desiertos que protegen el territorio', 'Tiene una sola estación climática durante todo el año', 'Su tamaño grande facilita el transporte interno'], correct: 0, tip: 'Por eso podemos sembrar muchos productos.' },
+  { cat: 'centroamerica', q: '¿Por qué Costa Rica tiene tanta biodiversidad?', options: ['Porque es uno de los países más grandes del mundo', 'Porque actúa como un puente natural entre América del Norte y América del Sur', 'Porque casi todo su territorio es selva amazónica', 'Porque tiene mucha nieve permanente en sus montañas'], correct: 1, tip: 'Por eso aquí viven especies de los dos continentes.' },
   { cat: 'centroamerica', q: '¿Cuál de estos NO es un volcán activo de Costa Rica?', options: ['Arenal', 'Poás', 'Irazú', 'Popocatépetl'], correct: 3, tip: 'El Popocatépetl está en México. En Costa Rica: Rincón de la Vieja, Arenal, Poás, Irazú y Turrialba.' },
-  { cat: 'centroamerica', q: '¿Qué desventaja tiene Costa Rica por su ubicación?', options: ['Tener mucho oro', 'Sufrir sismos y terremotos', 'Tener muchos amigos', 'Tener mucha comida'], correct: 1, tip: 'Estamos sobre placas tectónicas que se mueven.' },
-  { cat: 'centroamerica', q: '¿Qué son los sismos?', options: ['Lluvias muy fuertes', 'Movimientos de la corteza terrestre causados por placas tectónicas o erupciones volcánicas', 'Vientos muy fuertes', 'Mucho calor'], correct: 1, tip: 'Los sismos pequeños se llaman temblores y los grandes terremotos.' },
-  { cat: 'centroamerica', q: '¿Qué son los huracanes?', options: ['Movimientos de la tierra', 'Desprendimientos de rocas', 'Tormentas con lluvias intensas y vientos que pueden superar los 250 km/h', 'Falta de lluvia por mucho tiempo'], correct: 2, tip: 'Los huracanes pueden provocar inundaciones y, a veces, tornados.' },
-  { cat: 'centroamerica', q: '¿Qué es una sequía?', options: ['Mucha lluvia', 'La ausencia prolongada de lluvias que causa escasez de agua', 'Una tormenta', 'Un sismo'], correct: 1, tip: 'Las sequías afectan a los cultivos y al ganado.' },
-  { cat: 'centroamerica', q: '¿Qué son los deslizamientos?', options: ['Vientos fuertes', 'Lluvias muy intensas', 'Desprendimientos de rocas, tierra y árboles que bajan por una pendiente', 'Movimientos del mar'], correct: 2, tip: 'Suelen ocurrir cuando llueve mucho en zonas montañosas.' },
+  { cat: 'centroamerica', q: '¿Qué desventaja tiene Costa Rica por su ubicación?', options: ['Estar muy lejos de los océanos importantes', 'Sufrir sismos y terremotos por las placas tectónicas', 'Tener un clima frío que dificulta los cultivos', 'Estar aislada de los demás países centroamericanos'], correct: 1, tip: 'Estamos sobre placas tectónicas que se mueven.' },
+  { cat: 'centroamerica', q: '¿Qué son los sismos?', options: ['Lluvias muy fuertes que causan inundaciones', 'Movimientos de la corteza terrestre causados por placas tectónicas o erupciones volcánicas', 'Vientos giratorios que destruyen estructuras', 'Olas gigantes que llegan a las costas'], correct: 1, tip: 'Los sismos pequeños se llaman temblores y los grandes terremotos.' },
+  { cat: 'centroamerica', q: '¿Qué son los huracanes?', options: ['Movimientos de la tierra causados por placas tectónicas', 'Desprendimientos de rocas y tierra por una pendiente', 'Tormentas con lluvias intensas y vientos que pueden superar los 250 km/h', 'Períodos largos sin lluvia que afectan los cultivos'], correct: 2, tip: 'Los huracanes pueden provocar inundaciones y, a veces, tornados.' },
+  { cat: 'centroamerica', q: '¿Qué es una sequía?', options: ['Una tormenta tropical con mucha lluvia', 'La ausencia prolongada de lluvias que causa escasez de agua', 'Un período corto de fuertes vientos', 'Un movimiento brusco de la tierra'], correct: 1, tip: 'Las sequías afectan a los cultivos y al ganado.' },
+  { cat: 'centroamerica', q: '¿Qué son los deslizamientos?', options: ['Vientos giratorios muy fuertes', 'Lluvias intensas que duran muchos días', 'Desprendimientos de rocas, tierra y árboles que bajan por una pendiente', 'Movimientos del mar hacia las costas'], correct: 2, tip: 'Suelen ocurrir cuando llueve mucho en zonas montañosas.' },
+  { cat: 'centroamerica', q: 'Costa Rica conviven personas de distintas nacionalidades. ¿A qué ventaja se refiere esto?', options: ['Diversidad climática del país', 'Diversidad cultural por la posición geográfica', 'Cantidad de volcanes activos', 'Tamaño pequeño del territorio'], correct: 1, tip: 'Por nuestra ubicación, somos un país de muchas culturas.' },
 
-  // ECONOMÍA Y CONFLICTOS
-  { cat: 'economia', q: '¿Cuál de estos productos exporta Costa Rica?', options: ['Petróleo y aviones', 'Café, leche, textiles, lácteos y flores', 'Carros y camiones', 'Computadoras de juegos'], correct: 1, tip: 'También exportamos zapatos, salsas, medicamentos y envases de vidrio.' },
-  { cat: 'economia', q: '¿Cuál de estos productos importa Costa Rica?', options: ['Café', 'Plásticos para envasado, derivados del petróleo (gasolina) y papel', 'Bananos', 'Piñas'], correct: 1, tip: 'También importamos frijoles, harina, jabón y caucho.' },
-  { cat: 'economia', q: '¿Qué significa TLC?', options: ['Tratado de Libre Comercio', 'Tratado de Lugares Cerrados', 'Tarifa de Línea Costera', 'Trabajo Local Compartido'], correct: 0, tip: 'Es un acuerdo entre países para ampliar el mercado de bienes y servicios.' },
-  { cat: 'economia', q: '¿Qué es el SICA?', options: ['Un volcán activo', 'El Sistema de Integración Centroamericana, establecido en 1991', 'Una comida típica', 'Un río de Nicaragua'], correct: 1, tip: 'Su objetivo es unir a la región para fomentar la paz y el desarrollo.' },
-  { cat: 'economia', q: '¿Cómo se llama la tradición que celebra la independencia y comienza en Guatemala?', options: ['La Carrera de la Antorcha', 'El Tope Nacional', 'La Carrera de Tortugas', 'La Caminata Real'], correct: 0, tip: 'Simboliza el correo que llevaba la noticia de la independencia y termina en Costa Rica.' },
-  { cat: 'economia', q: '¿Cuál es uno de los conflictos limítrofes que ha tenido Costa Rica con Nicaragua?', options: ['Por las playas de Guanacaste', 'Por las montañas centrales', 'Problemas de navegación por el Río San Juan', 'Por la comida típica'], correct: 2, tip: 'El gobierno nicaragüense ha impedido que la policía costarricense navegue armada.' },
+  // ===== ECONOMÍA, POLÍTICA Y CULTURA =====
+  { cat: 'economia', q: '¿Cuál de estos productos exporta Costa Rica?', options: ['Trigo, soya y maíz a gran escala', 'Café, leche, textiles, lácteos y flores', 'Petróleo y derivados como gasolina', 'Vehículos pesados y maquinaria industrial'], correct: 1, tip: 'También exportamos zapatos, salsas, medicamentos y envases de vidrio.' },
+  { cat: 'economia', q: '¿Cuál de estos productos importa Costa Rica?', options: ['Café (uno de nuestros principales productos)', 'Plásticos para envasado, derivados del petróleo (gasolina) y papel', 'Bananos en grandes cantidades', 'Piñas para exportación'], correct: 1, tip: 'También importamos frijoles, harina, jabón y caucho.' },
+  { cat: 'economia', q: '¿Qué significa TLC?', options: ['Tratado de Libre Comercio', 'Tarifa Local Comercial', 'Tratado Latinoamericano de Cooperación', 'Transporte y Logística Centroamericana'], correct: 0, tip: 'Es un acuerdo entre países para ampliar el mercado de bienes y servicios.' },
+  { cat: 'economia', q: '¿Qué es el SICA?', options: ['Un acuerdo militar entre los países de Centroamérica', 'El Sistema de Integración Centroamericana, establecido en 1991', 'Una organización deportiva que une a la región', 'Un programa educativo de intercambio estudiantil'], correct: 1, tip: 'Su objetivo es unir a la región para fomentar la paz y el desarrollo.' },
+  { cat: 'economia', q: '¿En qué año se estableció el SICA?', options: ['1971', '1981', '1991', '2001'], correct: 2, tip: 'El SICA se creó en 1991 para unir a los países centroamericanos.' },
+  { cat: 'economia', q: '¿Cómo se llama la tradición que celebra la independencia centroamericana y comienza en Guatemala?', options: ['La Carrera de la Antorcha', 'El Desfile de los Faroles', 'La Marcha por la Libertad', 'El Recorrido del Bicentenario'], correct: 0, tip: 'Simboliza el correo que llevaba la noticia de la independencia y termina en Costa Rica.' },
+  { cat: 'economia', q: '¿Cuándo se celebra la independencia centroamericana?', options: ['15 de agosto', '15 de septiembre', '12 de octubre', '20 de noviembre'], correct: 1, tip: 'El 15 de septiembre se celebra en toda Centroamérica.' },
+  { cat: 'economia', q: '¿Cuál es uno de los conflictos limítrofes que ha tenido Costa Rica con Nicaragua?', options: ['Por las playas de Guanacaste y derechos de pesca', 'Por el control de los volcanes fronterizos', 'Problemas de navegación por el Río San Juan', 'Por las rutas comerciales terrestres'], correct: 2, tip: 'El gobierno nicaragüense ha impedido que la policía costarricense navegue armada.' },
   { cat: 'economia', q: '¿En qué año el ejército nicaragüense ocupó la Isla Calero?', options: ['2010', '1990', '2020', '1985'], correct: 0, tip: 'Esto generó un conflicto diplomático con Costa Rica.' },
   { cat: 'economia', q: '¿Cómo se llama el tratado limítrofe entre Costa Rica y Nicaragua?', options: ['Tratado de Versalles', 'Tratado Cañas-Jerez', 'Tratado de París', 'Tratado de Tordesillas'], correct: 1, tip: 'Aunque existe el tratado, han surgido disputas sobre sus fronteras.' },
-  { cat: 'economia', q: '¿Quiénes son los principales compradores de productos costarricenses?', options: ['Estados Unidos y Canadá solamente', 'Guatemala, Honduras y Panamá', 'Solo China', 'Solo Brasil'], correct: 1, tip: 'Mantenemos relaciones comerciales fuertes con nuestros vecinos centroamericanos.' },
-  { cat: 'economia', q: '¿Qué organización organiza los Juegos Deportivos Centroamericanos?', options: ['La FIFA', 'La Organización Deportiva Centroamericana (Ordeca)', 'Los Juegos Olímpicos', 'La NBA'], correct: 1, tip: 'Estos juegos refuerzan las relaciones culturales con nuestros vecinos.' },
+  { cat: 'economia', q: '¿Quiénes son los principales compradores de productos costarricenses dentro de Centroamérica?', options: ['Únicamente Estados Unidos y Canadá', 'Guatemala, Honduras y Panamá', 'Principalmente China y Japón', 'Brasil y Argentina como destino mayor'], correct: 1, tip: 'Mantenemos relaciones comerciales fuertes con nuestros vecinos centroamericanos.' },
+  { cat: 'economia', q: '¿Qué organización organiza los Juegos Deportivos Centroamericanos?', options: ['La FIFA (organización mundial de fútbol)', 'La Organización Deportiva Centroamericana (Ordeca)', 'El Comité Olímpico Internacional', 'La UNESCO de las Naciones Unidas'], correct: 1, tip: 'Estos juegos refuerzan las relaciones culturales con nuestros vecinos.' },
 ];
 
 // ===========================
@@ -84,11 +94,12 @@ const MATH_QUESTIONS = [
   // SUCESIONES Y PATRONES
   { cat: 'sucesiones', q: 'En la sucesión 10, 20, 30, 40, 50... ¿cuál es el patrón?', options: ['De 5 en 5', 'De 10 en 10', 'De 20 en 20', 'De 100 en 100'], correct: 1, tip: 'Cada número aumenta 10 unidades.' },
   { cat: 'sucesiones', q: '¿Qué número sigue en la sucesión: 22, 32, 42, 52...?', options: ['60', '62', '72', '56'], correct: 1, tip: 'El patrón es de 10 en 10, así que 52 + 10 = 62.' },
-  { cat: 'sucesiones', q: 'En la sucesión 15, 25, 35, 45, 55... el patrón es:', options: ['De 5 en 5', 'De 10 en 10', 'De 15 en 15', 'De 20 en 20'], correct: 1, tip: 'Cada número aumenta 10.' },
+  { cat: 'sucesiones', q: 'En la sucesión 15, 25, 35, 45, 55... el patrón es:', options: ['De 5 en 5', 'De 10 en 10', 'De 15 en 15', 'De 20 en 20'], correct: 1, tip: '¡Cuidado! Aunque empiece en 15, la diferencia entre cada número es 10.' },
   { cat: 'sucesiones', q: '¿Qué número sigue: 36, 46, 56, 66, 76...?', options: ['86', '96', '80', '100'], correct: 0, tip: 'El patrón es de 10 en 10: 76 + 10 = 86.' },
   { cat: 'sucesiones', q: 'Si una sucesión empieza en 12 y aumenta de 12 en 12, ¿qué número sigue después del 24?', options: ['30', '32', '36', '48'], correct: 2, tip: '24 + 12 = 36.' },
-  { cat: 'sucesiones', q: '¿Cuál es el patrón en: 16, 32, 48, 64?', options: ['De 8 en 8', 'De 10 en 10', 'De 16 en 16', 'De 20 en 20'], correct: 2, tip: 'Cada número aumenta 16.' },
+  { cat: 'sucesiones', q: '¿Cuál es el patrón en: 16, 32, 48, 64?', options: ['De 8 en 8', 'De 10 en 10', 'De 16 en 16', 'De 20 en 20'], correct: 2, tip: 'Cada número aumenta 16: 16+16=32, 32+16=48...' },
   { cat: 'sucesiones', q: '¿Qué número falta? 25, 35, ___, 55, 65', options: ['40', '45', '50', '60'], correct: 1, tip: 'El patrón es de 10 en 10: 35 + 10 = 45.' },
+  { cat: 'sucesiones', q: '¿Cómo se descubre el patrón de una sucesión?', options: ['Sumando todos los números de la sucesión', 'Mirando solo el primer número de la sucesión', 'Restando un número del siguiente para ver cuánto aumenta', 'Multiplicando el primero por el último'], correct: 2, tip: 'Por ejemplo: en 22, 32, 42... 32-22=10, 42-32=10. ¡El patrón es 10 en 10!' },
 
   // OPERACIONES
   { cat: 'operaciones', q: '¿Cuál es el resultado de 88 ÷ 8?', options: ['9', '10', '11', '12'], correct: 2, tip: '8 × 11 = 88, entonces 88 ÷ 8 = 11.' },
@@ -121,25 +132,54 @@ const MATH_QUESTIONS = [
   { cat: 'geometria', q: 'Si un triángulo tiene un ángulo de 120°, ¿cómo se clasifica?', options: ['Acutángulo', 'Rectángulo', 'Obtusángulo', 'Equilátero'], correct: 2, tip: '120° es mayor de 90°, así que es obtusángulo.' },
 
   // MEDIDAS DE LONGITUD
-  { cat: 'medidas', q: '¿Cuál es la unidad principal de medida de longitud?', options: ['El kilómetro', 'El metro', 'El centímetro', 'El decímetro'], correct: 1, tip: 'Todas las demás unidades son múltiplos o submúltiplos del metro.' },
-  { cat: 'medidas', q: '¿Cuál es la unidad de medida de longitud más grande?', options: ['Centímetro', 'Metro', 'Kilómetro', 'Milímetro'], correct: 2, tip: 'El kilómetro (km) tiene 1000 metros.' },
-  { cat: 'medidas', q: '¿Cuál es la unidad de medida de longitud más pequeña?', options: ['Centímetro', 'Milímetro', 'Decímetro', 'Metro'], correct: 1, tip: 'El milímetro (mm) es la más pequeña.' },
-  { cat: 'medidas', q: '¿Cuántos centímetros tiene un metro?', options: ['10', '100', '1000', '10 000'], correct: 1, tip: '1 m = 100 cm.' },
-  { cat: 'medidas', q: '¿Cuántos milímetros tiene un centímetro?', options: ['5', '10', '100', '1000'], correct: 1, tip: '1 cm = 10 mm.' },
-  { cat: 'medidas', q: '¿Cuántos metros tiene un kilómetro?', options: ['100', '1000', '10 000', '100 000'], correct: 1, tip: '1 km = 1000 m.' },
-  { cat: 'medidas', q: '5 m = ___ cm', options: ['50', '500', '5000', '5'], correct: 1, tip: 'Multiplica por 100: 5 × 100 = 500 cm.' },
-  { cat: 'medidas', q: '7 cm = ___ mm', options: ['7', '70', '700', '0,7'], correct: 1, tip: 'Multiplica por 10: 7 × 10 = 70 mm.' },
-  { cat: 'medidas', q: '2 m = ___ dm', options: ['2', '20', '200', '2000'], correct: 1, tip: '1 m = 10 dm, así que 2 m = 20 dm.' },
-  { cat: 'medidas', q: '8 dm = ___ mm', options: ['80', '800', '8000', '8'], correct: 1, tip: '1 dm = 100 mm, así que 8 dm = 800 mm.' },
-  { cat: 'medidas', q: '¿Qué unidad usarías para medir el largo de una carretera?', options: ['Milímetros', 'Centímetros', 'Kilómetros', 'Decímetros'], correct: 2, tip: 'Las distancias largas se miden en kilómetros.' },
-  { cat: 'medidas', q: '¿Qué unidad usarías para medir el largo de un lápiz?', options: ['Kilómetros', 'Metros', 'Centímetros', 'Hectómetros'], correct: 2, tip: 'Las cosas pequeñas se miden en centímetros.' },
-  { cat: 'medidas', q: 'Ordena de mayor a menor: km, cm, m, mm', options: ['km, m, cm, mm', 'mm, cm, m, km', 'cm, mm, m, km', 'm, km, cm, mm'], correct: 0, tip: 'El kilómetro es el más grande y el milímetro el más pequeño.' },
+  { cat: 'longitud', q: '¿Cuál es la unidad principal de medida de longitud?', options: ['El kilómetro', 'El metro', 'El centímetro', 'El decímetro'], correct: 1, tip: 'Todas las demás unidades son múltiplos o submúltiplos del metro.' },
+  { cat: 'longitud', q: '¿Cuál es la unidad de medida de longitud más grande?', options: ['Centímetro', 'Metro', 'Kilómetro', 'Milímetro'], correct: 2, tip: 'El kilómetro (km) tiene 1000 metros.' },
+  { cat: 'longitud', q: '¿Cuál es la unidad de medida de longitud más pequeña?', options: ['Centímetro', 'Milímetro', 'Decímetro', 'Metro'], correct: 1, tip: 'El milímetro (mm) es la más pequeña.' },
+  { cat: 'longitud', q: '¿Cuántos centímetros tiene un metro?', options: ['10', '100', '1000', '10 000'], correct: 1, tip: '1 m = 100 cm.' },
+  { cat: 'longitud', q: '¿Cuántos milímetros tiene un centímetro?', options: ['5', '10', '100', '1000'], correct: 1, tip: '1 cm = 10 mm.' },
+  { cat: 'longitud', q: '¿Cuántos metros tiene un kilómetro?', options: ['100', '1000', '10 000', '100 000'], correct: 1, tip: '1 km = 1000 m.' },
+  { cat: 'longitud', q: '5 m = ___ cm', options: ['50', '500', '5000', '5'], correct: 1, tip: 'Multiplica por 100: 5 × 100 = 500 cm.' },
+  { cat: 'longitud', q: '7 cm = ___ mm', options: ['7', '70', '700', '0,7'], correct: 1, tip: 'Multiplica por 10: 7 × 10 = 70 mm.' },
+  { cat: 'longitud', q: '2 m = ___ dm', options: ['2', '20', '200', '2000'], correct: 1, tip: '1 m = 10 dm, así que 2 m = 20 dm.' },
+  { cat: 'longitud', q: '8 dm = ___ mm', options: ['80', '800', '8000', '8'], correct: 1, tip: '1 dm = 100 mm, así que 8 dm = 800 mm.' },
+  { cat: 'longitud', q: '¿Qué unidad usarías para medir el largo de una carretera?', options: ['Milímetros', 'Centímetros', 'Kilómetros', 'Decímetros'], correct: 2, tip: 'Las distancias largas se miden en kilómetros.' },
+  { cat: 'longitud', q: '¿Qué unidad usarías para medir el largo de un lápiz?', options: ['Kilómetros', 'Metros', 'Centímetros', 'Hectómetros'], correct: 2, tip: 'Las cosas pequeñas se miden en centímetros.' },
+  { cat: 'longitud', q: 'Ordena de mayor a menor: km, cm, m, mm', options: ['km, m, cm, mm', 'mm, cm, m, km', 'cm, mm, m, km', 'm, km, cm, mm'], correct: 0, tip: 'El kilómetro es el más grande y el milímetro el más pequeño.' },
+
+  // ÁREAS Y SUPERFICIE
+  { cat: 'areas', q: '¿Cuál es la unidad principal para medir áreas?', options: ['El metro (m)', 'El metro cuadrado (m²)', 'El metro cúbico (m³)', 'El kilómetro (km)'], correct: 1, tip: 'El metro cuadrado se usa para medir superficies, como el piso de un cuarto.' },
+  { cat: 'areas', q: '¿Para qué sirve el metro cuadrado?', options: ['Para medir distancias largas', 'Para medir el área de superficies', 'Para medir el peso', 'Para medir el tiempo'], correct: 1, tip: 'Lo usamos para saber cuánto espacio ocupa una superficie.' },
+  { cat: 'areas', q: '¿Cuál es el símbolo del metro cuadrado?', options: ['m', 'm²', 'm³', 'cm'], correct: 1, tip: 'El "²" arriba indica que es cuadrado (al cuadrado).' },
+  { cat: 'areas', q: '¿Cuáles son los múltiplos del metro cuadrado?', options: ['cm², dm², mm²', 'dam², hm², km²', 'g, kg, mg', 'ml, l, kl'], correct: 1, tip: 'Los múltiplos son MÁS GRANDES que el m²: dam², hm², km².' },
+  { cat: 'areas', q: '¿Cuáles son los submúltiplos del metro cuadrado?', options: ['dam², hm², km²', 'dm², cm², mm²', 'm, dm, cm', 'l, ml, kl'], correct: 1, tip: 'Los submúltiplos son MÁS PEQUEÑOS que el m²: dm², cm², mm².' },
+  { cat: 'areas', q: '¿Qué unidad usarías para medir el área del piso de tu cuarto?', options: ['Centímetros cuadrados (cm²)', 'Metros cuadrados (m²)', 'Kilómetros cuadrados (km²)', 'Milímetros cuadrados (mm²)'], correct: 1, tip: 'Para áreas como cuartos, casas o canchas usamos m².' },
+  { cat: 'areas', q: '¿Qué unidad usarías para medir el área de un país?', options: ['Centímetros cuadrados (cm²)', 'Metros cuadrados (m²)', 'Kilómetros cuadrados (km²)', 'Milímetros cuadrados (mm²)'], correct: 2, tip: 'Costa Rica tiene 51 100 km² de superficie.' },
+  { cat: 'areas', q: '¿Qué unidad usarías para medir el área de una uña?', options: ['Milímetros cuadrados (mm²) o centímetros cuadrados (cm²)', 'Metros cuadrados (m²)', 'Kilómetros cuadrados (km²)', 'Decámetros cuadrados (dam²)'], correct: 0, tip: 'Para áreas muy pequeñas usamos mm² o cm².' },
+  { cat: 'areas', q: '¿Cuál es la unidad de área MÁS GRANDE?', options: ['m²', 'km²', 'cm²', 'dm²'], correct: 1, tip: 'El kilómetro cuadrado (km²) es el más grande de los múltiplos comunes.' },
+  { cat: 'areas', q: '¿Cuál es la unidad de área MÁS PEQUEÑA?', options: ['m²', 'cm²', 'mm²', 'km²'], correct: 2, tip: 'El milímetro cuadrado (mm²) es el más pequeño.' },
+  { cat: 'areas', q: 'Costa Rica tiene 51 100 km². ¿En qué unidad se mide la superficie de un país?', options: ['Centímetros cuadrados', 'Metros cuadrados', 'Kilómetros cuadrados', 'Milímetros cuadrados'], correct: 2, tip: 'Para áreas tan grandes como un país, usamos km².' },
+  { cat: 'areas', q: '¿Qué diferencia hay entre el metro (m) y el metro cuadrado (m²)?', options: ['Son lo mismo', 'El metro mide longitud, el m² mide área (superficie)', 'El m² es más pequeño que el m', 'El metro mide peso'], correct: 1, tip: 'Con el metro medimos lo largo, con el m² lo ancho × largo (área).' },
+
+  // DINERO Y MONEDAS
+  { cat: 'dinero', q: '¿Cuál es la unidad monetaria de Costa Rica?', options: ['El dólar', 'El euro', 'El colón', 'El peso'], correct: 2, tip: 'El colón se llama así en honor a Cristóbal Colón.' },
+  { cat: 'dinero', q: '¿Cuál es el símbolo del colón costarricense?', options: ['$', '€', '₡', '£'], correct: 2, tip: 'El símbolo ₡ es una "C" con dos rayitas verticales.' },
+  { cat: 'dinero', q: '¿Cuántas monedas de ₡100 necesitas para tener ₡500?', options: ['3', '4', '5', '10'], correct: 2, tip: '5 × ₡100 = ₡500.' },
+  { cat: 'dinero', q: '¿Cuántos billetes de ₡1000 necesitas para tener ₡5000?', options: ['3', '5', '10', '50'], correct: 1, tip: '5 × ₡1000 = ₡5000.' },
+  { cat: 'dinero', q: '¿Cuántas monedas de ₡50 hacen ₡100?', options: ['1', '2', '5', '10'], correct: 1, tip: '2 × ₡50 = ₡100.' },
+  { cat: 'dinero', q: 'Si tienes 2 billetes de ₡5000 y 1 de ₡1000, ¿cuánto dinero tienes?', options: ['₡6 000', '₡10 000', '₡11 000', '₡15 000'], correct: 2, tip: '₡5000 + ₡5000 + ₡1000 = ₡11 000.' },
+  { cat: 'dinero', q: '¿Cuál es el billete de mayor valor en Costa Rica?', options: ['₡10 000', '₡20 000', '₡50 000', '₡100 000'], correct: 2, tip: 'El billete de ₡50 000 es el más alto.' },
+  { cat: 'dinero', q: 'Si una golosina cuesta ₡500 y pagas con ₡1000, ¿cuánto te dan de cambio?', options: ['₡100', '₡200', '₡500', '₡1500'], correct: 2, tip: '₡1000 - ₡500 = ₡500 de vuelto.' },
+  { cat: 'dinero', q: 'Compras un libro de ₡3500 y pagas con ₡5000. ¿Cuánto te dan de vuelto?', options: ['₡500', '₡1500', '₡2000', '₡3500'], correct: 1, tip: '₡5000 - ₡3500 = ₡1500.' },
+  { cat: 'dinero', q: '¿Cuántas monedas de ₡25 necesitas para tener ₡100?', options: ['2', '3', '4', '5'], correct: 2, tip: '4 × ₡25 = ₡100.' },
+  { cat: 'dinero', q: '¿Cuántos billetes de ₡2000 hacen ₡10 000?', options: ['2', '5', '10', '20'], correct: 1, tip: '5 × ₡2000 = ₡10 000.' },
+  { cat: 'dinero', q: 'María tiene 3 billetes de ₡2000 y 2 de ₡1000. ¿Cuánto tiene en total?', options: ['₡5 000', '₡7 000', '₡8 000', '₡10 000'], correct: 2, tip: '(3 × ₡2000) + (2 × ₡1000) = ₡6000 + ₡2000 = ₡8 000.' },
 
   // DATOS Y GRÁFICOS
-  { cat: 'graficos', q: 'En un gráfico de barras, ¿cómo se muestra la cantidad?', options: ['Con la altura de las barras', 'Con el color de las barras', 'Con el ancho del papel', 'Con palabras escritas'], correct: 0, tip: 'Mientras más alta la barra, más cantidad representa.' },
+  { cat: 'graficos', q: 'En un gráfico de barras, ¿cómo se muestra la cantidad?', options: ['Con la altura de las barras', 'Con el color de las barras', 'Con el ancho del papel', 'Con el orden alfabético'], correct: 0, tip: 'Mientras más alta la barra, más cantidad representa.' },
   { cat: 'graficos', q: 'Si en un gráfico la fruta favorita es el banano con 60 niños, ¿qué fruta es la más popular?', options: ['Manzana', 'Banano', 'Fresa', 'Naranja'], correct: 1, tip: 'La fruta favorita es la que tiene la barra más alta.' },
-  { cat: 'graficos', q: 'En un gráfico de barras, la fruta menos preferida es la que tiene...', options: ['La barra más alta', 'La barra más baja', 'Más colores', 'Un nombre largo'], correct: 1, tip: 'La barra más bajita representa la menor cantidad.' },
-  { cat: 'graficos', q: '¿Para qué sirve un gráfico de barras?', options: ['Para dibujar', 'Para comparar cantidades de forma visual', 'Para escribir nombres', 'Para hacer cálculos'], correct: 1, tip: 'Los gráficos hacen que sea más fácil comparar cantidades.' },
+  { cat: 'graficos', q: 'En un gráfico de barras, la fruta menos preferida es la que tiene...', options: ['La barra más alta', 'La barra más baja', 'El color más oscuro', 'El nombre más largo'], correct: 1, tip: 'La barra más bajita representa la menor cantidad.' },
+  { cat: 'graficos', q: '¿Para qué sirve un gráfico de barras?', options: ['Para hacer cálculos matemáticos complejos', 'Para comparar cantidades de forma visual', 'Para escribir información en orden alfabético', 'Para guardar datos secretos'], correct: 1, tip: 'Los gráficos hacen que sea más fácil comparar cantidades.' },
+  { cat: 'graficos', q: '¿Cómo podemos resumir información de manera visual?', options: ['Con dibujos, diagramas, cuadros y gráficos', 'Solo escribiendo párrafos largos', 'Únicamente con listas de números', 'Con grabaciones de audio'], correct: 0, tip: 'Hay muchas formas de representar datos visualmente.' },
 ];
 
 // ===========================
@@ -148,9 +188,9 @@ const MATH_QUESTIONS = [
 const SOCIAL_CATEGORIES = [
   { id: 'all', name: 'Todos los temas', icon: Sparkles, color: '#f59e0b', desc: 'Practica todo lo que necesitas saber' },
   { id: 'civica', name: 'Estudios Sociales y Cívica', icon: BookOpen, color: '#16a34a', desc: 'Definiciones y disciplinas' },
-  { id: 'geografia', name: 'Geografía de Costa Rica', icon: MapPin, color: '#0ea5e9', desc: 'Mapas, provincias y límites' },
+  { id: 'geografia', name: 'Geografía de Costa Rica', icon: MapPin, color: '#0ea5e9', desc: 'Mapas, provincias, clima y límites' },
   { id: 'centroamerica', name: 'Centroamérica y vecinos', icon: Globe2, color: '#dc2626', desc: 'Países, ventajas y desastres' },
-  { id: 'economia', name: 'Economía y conflictos', icon: Briefcase, color: '#7c3aed', desc: 'Comercio, SICA y conflictos limítrofes' },
+  { id: 'economia', name: 'Economía, política y cultura', icon: Briefcase, color: '#7c3aed', desc: 'Comercio, SICA, tradiciones y conflictos' },
 ];
 
 const MATH_CATEGORIES = [
@@ -159,7 +199,9 @@ const MATH_CATEGORIES = [
   { id: 'sucesiones', name: 'Sucesiones y patrones', icon: TrendingUp, color: '#0ea5e9', desc: 'Series numéricas y patrones' },
   { id: 'operaciones', name: 'División y múltiplos', icon: Divide, color: '#16a34a', desc: 'Divisiones y múltiplos' },
   { id: 'geometria', name: 'Geometría', icon: Triangle, color: '#dc2626', desc: 'Triángulos y ángulos' },
-  { id: 'medidas', name: 'Medidas de longitud', icon: Ruler, color: '#f59e0b', desc: 'km, m, cm, mm y conversiones' },
+  { id: 'longitud', name: 'Medidas de longitud', icon: Ruler, color: '#f59e0b', desc: 'km, m, cm, mm y conversiones' },
+  { id: 'areas', name: 'Áreas y superficie', icon: Square, color: '#0891b2', desc: 'Metro cuadrado y unidades de área' },
+  { id: 'dinero', name: 'Dinero y monedas', icon: Coins, color: '#ca8a04', desc: 'Colones, monedas y billetes' },
   { id: 'graficos', name: 'Datos y gráficos', icon: BarChart3, color: '#ec4899', desc: 'Gráficos de barras' },
 ];
 
@@ -321,7 +363,7 @@ export default function StudyApp() {
           <div className="text-center anim-bounce-in mb-8">
             <div className="text-7xl sm:text-8xl mb-4 anim-float inline-block">📚</div>
             <h1 className="font-display text-4xl sm:text-6xl font-bold mb-3" style={{ color: '#15803d' }}>
-              ¡Hola, Elián!
+              ¡Hola, explorador!
             </h1>
             <p className="text-lg sm:text-xl text-gray-700 font-semibold max-w-xl mx-auto">
               Elige la materia que quieres practicar hoy
